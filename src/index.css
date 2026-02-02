@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import "tailwindcss";
+@import "react-loading-skeleton/dist/skeleton.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-neutral-900: #141d2f;
+  --color-neutral-800: #1e2a47;
+  --color-neutral-700: #2b3442;
+  --color-neutral-500: #4b6a9b;
+  --color-neutral-300: #697c9a;
+  --color-neutral-200: #90a4d4;
+  --color-neutral-100: #f6f8ff;
+  --color-neutral-0: #ffffff;
+
+  --color-blue-300: #60abff;
+  --color-blue-500: #0079ff;
+
+  --color-red-500: #f74646;
+
+  --font-display: "Space Mono", sans-serif;
+}
+
+@utility text-preset-1 {
+  @apply text-[26px] leading-[120%] font-bold tracking-[0px];
+}
+
+@utility text-preset-2 {
+  @apply text-[22px] leading-[140%] font-bold tracking-[0px];
+}
+
+@utility text-preset-3 {
+  @apply text-[18px] leading-[140%] tracking-[0px];
+}
+
+@utility text-preset-3-mobile {
+  @apply text-[13px] leading-[140%] tracking-[0px];
+}
+
+@utility text-preset-4 {
+  @apply text-[16px] leading-[150%] tracking-[0px];
+}
+
+@utility text-preset-5 {
+  @apply text-[16px] leading-[150%] font-bold tracking-[0px];
+}
+
+@utility text-preset-6 {
+  @apply text-[15px] leading-[150%] tracking-[0px];
+}
+
+@utility text-preset-7 {
+  @apply text-[13px] leading-[150%] tracking-[0px];
+}
+
+@utility text-preset-8 {
+  @apply text-[13px] leading-[140%] font-bold tracking-[2.5px];
+}
+
+button {
+  @apply cursor-pointer;
+}
+
+:root {
+  --background: var(--color-neutral-100);
+  --foreground: var(--color-neutral-900);
+  --card: var(--color-neutral-0);
+  --card-foreground: var(--color-neutral-700);
+  --primary: var(--color-blue-500);
+  --primary-foreground: var(--color-neutral-0);
+  --secondary-foreground: var(--color-neutral-500);
+  --secondary-foreground-hover: var(--color-neutral-700);
+  --accent: var(--color-blue-500);
+  --muted: var(--color-neutral-100);
+  --muted-foreground: var(--color-neutral-500);
+  --destructive: var(--color-neutral-0);
+  --destructive-foreground: var(--color-red-500);
+  --input: var(--color-neutral-500);
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  select:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+    -webkit-text-fill-color: #000;
+    transition: background-color 9999s ease-in-out 0s;
+  }
+}
+
+.dark {
+  --background: var(--color-neutral-900);
+  --foreground: var(--color-neutral-0);
+  --card: var(--color-neutral-800);
+  --card-foreground: var(--color-neutral-0);
+  --primary: var(--color-blue-500);
+  --primary-foreground: var(--color-neutral-0);
+  --secondary-foreground: var(--color-neutral-200);
+  --secondary-foreground-hover: var(--color-neutral-0);
+  --accent: var(--color-blue-300);
+  --muted: var(--color-neutral-900);
+  --muted-foreground: var(--color-neutral-0);
+  --destructive: var(--color-neutral-0);
+  --destructive-foreground: var(--color-red-500);
+  --input: var(--color-neutral-0);
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  select:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #1e2a47 inset;
+    -webkit-text-fill-color: #fff;
+    transition: background-color 9999s ease-in-out 0s;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary-foreground-hover: var(--secondary-foreground-hover);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-input: var(--input);
+}
