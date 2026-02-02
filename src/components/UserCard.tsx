@@ -63,7 +63,9 @@ function UserCard({ githubUser }: Props) {
             {location ? (
               <p className="text-preset-6 text-muted-foreground">{location}</p>
             ) : (
-              <span className="opacity-70">Not Available</span>
+              <span className="text-muted-foreground opacity-70">
+                Not Available
+              </span>
             )}
           </div>
           <div className="flex items-center gap-4">
